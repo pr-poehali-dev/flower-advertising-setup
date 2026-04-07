@@ -57,8 +57,8 @@ const months = [
     metric: "Цель: первые лиды, сбор данных",
     kpi: [
       { label: "CTR", value: "4–6%" },
-      { label: "Лиды", value: "20–40" },
-      { label: "CPL", value: "≤ 2500₽" },
+      { label: "Заказы", value: "40–60" },
+      { label: "CPL", value: "≤ 800₽" },
     ],
   },
   {
@@ -74,15 +74,15 @@ const months = [
     metric: "Цель: снижение CPL на 30%",
     kpi: [
       { label: "CTR", value: "6–9%" },
-      { label: "Лиды", value: "60–90" },
-      { label: "CPL", value: "≤ 1800₽" },
+      { label: "Заказы", value: "70–100" },
+      { label: "CPL", value: "≤ 600₽" },
     ],
   },
   {
     num: "03", label: "МЕСЯЦ", title: "Масштаб и ROI",
     color: "lime",
     tasks: [
-      "Выход на целевой ROI 250%+",
+      "Выход на целевой ROI 150%+",
       "Автоматические стратегии управления ставками",
       "Кросс-канальная синергия (РСЯ + Поиск)",
       "Запуск медийной рекламы для Brand Awareness",
@@ -91,19 +91,19 @@ const months = [
     metric: "Цель: стабильная прибыльность",
     kpi: [
       { label: "CTR", value: "8–12%" },
-      { label: "Лиды", value: "100–150" },
-      { label: "CPL", value: "≤ 1200₽" },
+      { label: "Заказы", value: "100–130" },
+      { label: "CPL", value: "≤ 480₽" },
     ],
   },
 ];
 
 const keywords = [
-  { query: "купить окна пвх москва", volume: 14800, cpc: 85, intent: "горячий" },
-  { query: "установка пластиковых окон", volume: 8900, cpc: 72, intent: "горячий" },
-  { query: "окна в квартиру цена", volume: 6500, cpc: 58, intent: "тёплый" },
-  { query: "пластиковые окна недорого", volume: 12300, cpc: 45, intent: "тёплый" },
-  { query: "замена окон стоимость", volume: 4200, cpc: 94, intent: "горячий" },
-  { query: "производитель окон пвх", volume: 2800, cpc: 38, intent: "холодный" },
+  { query: "доставка цветов челябинск", volume: 8100, cpc: 42, intent: "горячий" },
+  { query: "купить букет цветов челябинск", volume: 5400, cpc: 38, intent: "горячий" },
+  { query: "цветы с доставкой на дом челябинск", volume: 3900, cpc: 35, intent: "горячий" },
+  { query: "заказать цветы челябинск", volume: 4700, cpc: 40, intent: "горячий" },
+  { query: "недорогие цветы челябинск", volume: 2200, cpc: 22, intent: "тёплый" },
+  { query: "цветочный магазин челябинск", volume: 6300, cpc: 18, intent: "холодный" },
 ];
 
 const weekTasks = [
@@ -148,16 +148,6 @@ const strategies = [
   },
 ];
 
-const tools = [
-  { name: "Яндекс.Директ", category: "Реклама", color: "lime" },
-  { name: "Google Ads", category: "Реклама", color: "cyan" },
-  { name: "Calltouch", category: "Аналитика", color: "lime" },
-  { name: "Яндекс.Метрика", category: "Аналитика", color: "cyan" },
-  { name: "Datafeed.ru", category: "Автоматизация", color: "lime" },
-  { name: "Semrush", category: "Конкуренты", color: "cyan" },
-  { name: "K50", category: "Управление ставками", color: "lime" },
-  { name: "Roistat", category: "Сквозная аналитика", color: "cyan" },
-];
 
 const risks = [
   {
@@ -187,10 +177,10 @@ const risks = [
 ];
 
 export default function Index() {
-  const [budget, setBudget] = useState(150000);
-  const [convRate, setConvRate] = useState(4);
-  const [avgCheck, setAvgCheck] = useState(25000);
-  const [margin, setMargin] = useState(35);
+  const [budget, setBudget] = useState(40000);
+  const [convRate, setConvRate] = useState(3);
+  const [avgCheck, setAvgCheck] = useState(3000);
+  const [margin, setMargin] = useState(40);
   const [activeMonth, setActiveMonth] = useState(0);
 
   const clicks = Math.round(budget / 65);
@@ -273,10 +263,10 @@ export default function Index() {
 
         <Section className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: "Ключевых запросов", value: 500, suffix: "+" },
-            { label: "Целевой CPL", value: 1200, suffix: "₽" },
-            { label: "Прогноз лидов / мес", value: 120, suffix: "+" },
-            { label: "Целевой ROI", value: 250, suffix: "%" },
+            { label: "Ключевых запросов", value: 300, suffix: "+" },
+            { label: "Целевой CPL", value: 480, suffix: "₽" },
+            { label: "Прогноз заказов / мес", value: 120, suffix: "+" },
+            { label: "Целевой ROI", value: 160, suffix: "%" },
           ].map((m) => (
             <div key={m.label} className="glass rounded-2xl p-6 text-center hover:border-lime/30 transition-all border border-white/5">
               <div className="font-oswald text-4xl font-bold text-lime text-glow-lime">
@@ -492,9 +482,9 @@ export default function Index() {
             <div className="grid lg:grid-cols-2 gap-8">
               <div className="glass rounded-2xl p-8 space-y-8">
                 {[
-                  { label: "Рекламный бюджет", value: budget, min: 30000, max: 1000000, step: 10000, onChange: setBudget, format: (v: number) => `${(v / 1000).toFixed(0)} 000 ₽` },
+                  { label: "Рекламный бюджет", value: budget, min: 10000, max: 100000, step: 5000, onChange: setBudget, format: (v: number) => `${v.toLocaleString("ru")} ₽` },
                   { label: "Конверсия сайта (%)", value: convRate, min: 1, max: 15, step: 0.5, onChange: setConvRate, format: (v: number) => `${v}%` },
-                  { label: "Средний чек", value: avgCheck, min: 5000, max: 500000, step: 5000, onChange: setAvgCheck, format: (v: number) => `${(v / 1000).toFixed(0)} 000 ₽` },
+                  { label: "Средний чек", value: avgCheck, min: 500, max: 15000, step: 500, onChange: setAvgCheck, format: (v: number) => `${v.toLocaleString("ru")} ₽` },
                   { label: "Маржинальность (%)", value: margin, min: 10, max: 80, step: 5, onChange: setMargin, format: (v: number) => `${v}%` },
                 ].map((sl) => (
                   <div key={sl.label}>
@@ -616,28 +606,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* TOOLS */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <Section>
-          <div className="text-center mb-12">
-            <div className="text-lime font-golos text-sm uppercase tracking-widest mb-3">Технологический стек</div>
-            <h2 className="font-oswald text-5xl font-bold uppercase">ИНСТРУМЕНТЫ</h2>
-          </div>
-        </Section>
-        <Section className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {tools.map((t, i) => (
-            <div key={i} className="glass rounded-xl p-5 text-center hover:scale-105 transition-all border border-white/5 group cursor-default">
-              <div className={`font-oswald text-lg font-bold transition-colors ${t.color === "lime" ? "group-hover:text-lime" : "group-hover:text-cyan"}`}>
-                {t.name}
-              </div>
-              <div className={`text-xs font-golos mt-1 ${t.color === "lime" ? "text-lime/60" : "text-cyan/60"}`}>
-                {t.category}
-              </div>
-            </div>
-          ))}
-        </Section>
-      </section>
-
       {/* FINANCIAL */}
       <section className="border-t border-white/5 py-20" style={{ background: "rgba(255,255,255,0.02)" }}>
         <div className="max-w-6xl mx-auto px-6">
@@ -660,13 +628,13 @@ export default function Index() {
                 </thead>
                 <tbody>
                   {[
-                    { label: "Бюджет (₽)", vals: ["100 000", "150 000", "200 000"] },
-                    { label: "Лиды", vals: ["30–40", "60–90", "100–150"] },
-                    { label: "Стоимость лида", vals: ["2 500₽", "1 800₽", "1 200₽"] },
-                    { label: "Конверсия в сделку", vals: ["15%", "20%", "25%"] },
-                    { label: "Сделки", vals: ["5–6", "12–18", "25–37"] },
-                    { label: "Выручка (при чеке 30К)", vals: ["150–180К", "360–540К", "750К–1.1М"] },
-                    { label: "ROI", vals: ["50–80%", "140–260%", "275–450%"] },
+                    { label: "Бюджет (₽)", vals: ["40 000", "50 000", "60 000"] },
+                    { label: "Заказы", vals: ["40–60", "70–100", "100–130"] },
+                    { label: "Стоимость заказа", vals: ["≤ 800₽", "≤ 600₽", "≤ 480₽"] },
+                    { label: "Конверсия сайта", vals: ["2–3%", "3–4%", "4–5%"] },
+                    { label: "Выручка (чек 3 000₽)", vals: ["120–180К", "210–300К", "300–390К"] },
+                    { label: "Прибыль (маржа 40%)", vals: ["8–32К", "34–70К", "60–96К"] },
+                    { label: "ROI", vals: ["20–80%", "68–140%", "100–160%"] },
                   ].map((row, i) => (
                     <tr key={i} className="border-b border-white/5 hover:bg-white/2 transition-colors">
                       <td className="py-4 text-white/60 text-sm">{row.label}</td>
