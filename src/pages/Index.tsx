@@ -49,7 +49,7 @@ const months = [
     color: "lime",
     tasks: [
       "Глубокий анализ конкурентов и ниши",
-      "Сбор семантики 500+ ключевых запросов",
+      "Сбор семантики ключевых запросов",
       "Настройка аналитики и колл-трекинга",
       "Запуск тестовых кампаний по 5 группам",
       "A/B тест объявлений и посадочных страниц",
@@ -204,7 +204,7 @@ export default function Index() {
             <div className="w-8 h-8 rounded-lg bg-lime flex items-center justify-center">
               <Icon name="Zap" size={16} className="text-navy" />
             </div>
-            <span className="font-oswald text-lg font-semibold tracking-wide">КОНТЕКСТ PRO</span>
+            <span className="font-oswald text-lg font-semibold tracking-wide">Доставка цветов · Челябинск</span>
           </div>
           <div className="hidden md:flex items-center gap-6 text-sm text-white/60 font-golos">
             <a href="#plan" className="hover:text-lime transition-colors">План</a>
@@ -229,17 +229,9 @@ export default function Index() {
             </div>
             <h1 className="font-oswald text-5xl lg:text-7xl font-bold leading-none mb-6 uppercase">
               Контекстная<br />
-              <span className="text-lime text-glow-lime">реклама</span><br />
-              которая <span className="text-cyan text-glow-cyan">работает</span>
+              <span className="text-lime text-glow-lime">реклама</span>
             </h1>
-            <p className="text-white/60 text-lg font-golos leading-relaxed mb-8">
-              Стратегия на 3 месяца: от первых лидов до стабильной рентабельности.
-              С защитой бюджетов, ROI-калькулятором и прозрачной отчётностью.
-            </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-lime text-navy font-oswald font-semibold text-lg px-8 py-4 rounded-xl hover:brightness-110 transition-all glow-lime">
-                НАЧАТЬ РАБОТУ
-              </button>
               <button className="glass border border-white/20 text-white font-golos px-8 py-4 rounded-xl hover:border-lime/50 transition-all">
                 Посмотреть план →
               </button>
@@ -282,7 +274,6 @@ export default function Index() {
       <section id="plan" className="max-w-6xl mx-auto px-6 py-20">
         <Section>
           <div className="text-center mb-12">
-            <div className="text-lime font-golos text-sm uppercase tracking-widest mb-3">Дорожная карта</div>
             <h2 className="font-oswald text-5xl font-bold uppercase">ПЛАН НА 3 МЕСЯЦА</h2>
           </div>
         </Section>
@@ -652,30 +643,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="max-w-6xl mx-auto px-6 py-24 text-center">
-        <Section>
-          <div className="gradient-border rounded-3xl p-12">
-            <div className="w-16 h-16 bg-lime rounded-2xl flex items-center justify-center mx-auto mb-6 animate-pulse-lime">
-              <Icon name="Rocket" size={32} className="text-navy" />
-            </div>
-            <h2 className="font-oswald text-5xl font-bold uppercase mb-4">
-              ГОТОВЫ ЗАПУСТИТЬ?
-            </h2>
-            <p className="text-white/60 font-golos text-lg mb-8 max-w-xl mx-auto">
-              Обсудим бюджет, нишу и цели. Первый аудит и стратегию — бесплатно.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <button className="bg-lime text-navy font-oswald font-bold text-xl px-10 py-5 rounded-xl hover:brightness-110 transition-all glow-lime">
-                ОБСУДИТЬ ПРОЕКТ
-              </button>
-              <button className="glass border border-white/20 text-white font-golos text-lg px-10 py-5 rounded-xl hover:border-lime/50 transition-all">
-                Скачать КП (PDF)
-              </button>
-            </div>
-          </div>
-        </Section>
-      </section>
+
 
       {/* FOOTER */}
       <footer className="border-t border-white/5 py-8">
@@ -684,7 +652,7 @@ export default function Index() {
             <div className="w-7 h-7 rounded-lg bg-lime flex items-center justify-center">
               <Icon name="Zap" size={14} className="text-navy" />
             </div>
-            <span className="font-oswald text-white/50">КОНТЕКСТ PRO</span>
+            <span className="font-oswald text-white/50">Доставка цветов · Челябинск</span>
           </div>
           <div className="text-white/30 font-golos text-sm">
             Коммерческое предложение · 2026
