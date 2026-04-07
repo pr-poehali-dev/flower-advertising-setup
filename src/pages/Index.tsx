@@ -198,92 +198,83 @@ export default function Index() {
       }} />
 
       {/* NAV */}
-      <nav className="sticky top-0 z-50 glass border-b border-white/5 px-6 py-4">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-lime flex items-center justify-center">
-              <Icon name="Zap" size={16} className="text-navy" />
-            </div>
-            <span className="font-oswald text-lg font-semibold tracking-wide">Доставка цветов · Челябинск</span>
-          </div>
-          <div className="hidden md:flex items-center gap-6 text-sm text-white/60 font-golos">
+      <nav className="sticky top-0 z-50 glass border-b border-white/5 px-4 py-3">
+        <div className="max-w-6xl mx-auto flex items-center justify-center">
+          <div className="flex items-center gap-4 text-sm text-white/60 font-golos flex-wrap justify-center">
             <a href="#plan" className="hover:text-lime transition-colors">План</a>
             <a href="#keywords" className="hover:text-lime transition-colors">Запросы</a>
             <a href="#tasks" className="hover:text-lime transition-colors">Задачи</a>
             <a href="#roi" className="hover:text-lime transition-colors">ROI</a>
             <a href="#protection" className="hover:text-lime transition-colors">Защита</a>
           </div>
-          <button className="bg-lime text-navy text-sm font-golos font-semibold px-5 py-2 rounded-lg hover:brightness-110 transition-all glow-lime">
-            Обсудить проект
-          </button>
         </div>
       </nav>
 
       {/* HERO */}
-      <section className="relative max-w-6xl mx-auto px-6 pt-20 pb-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="animate-fade-in">
-            <div className="inline-flex items-center gap-2 glass-lime rounded-full px-4 py-2 text-lime text-sm font-golos font-medium mb-6">
+      <section className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-10 sm:pt-20 pb-12 sm:pb-24">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="animate-fade-in text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 glass-lime rounded-full px-4 py-2 text-lime text-xs sm:text-sm font-golos font-medium mb-4 sm:mb-6">
               <span className="w-2 h-2 bg-lime rounded-full animate-pulse" />
               Коммерческое предложение 2026
             </div>
-            <h1 className="font-oswald text-5xl lg:text-7xl font-bold leading-none mb-6 uppercase">
+            <h1 className="font-oswald text-4xl sm:text-5xl lg:text-7xl font-bold leading-none mb-4 sm:mb-6 uppercase">
               Контекстная<br />
               <span className="text-lime text-glow-lime">реклама</span>
             </h1>
-            <div className="flex flex-wrap gap-4">
-              <button className="glass border border-white/20 text-white font-golos px-8 py-4 rounded-xl hover:border-lime/50 transition-all">
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+              <a href="#plan" className="glass border border-white/20 text-white font-golos px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:border-lime/50 transition-all text-sm sm:text-base">
                 Посмотреть план →
-              </button>
+              </a>
             </div>
           </div>
-          <div className="relative animate-fade-in" style={{ animationDelay: "0.3s", opacity: 0 }}>
+          <div className="relative animate-fade-in mt-4 lg:mt-0" style={{ animationDelay: "0.3s", opacity: 0 }}>
             <div className="relative rounded-2xl overflow-hidden glow-lime animate-float">
               <img src={HERO_IMG} alt="Dashboard" className="w-full rounded-2xl" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
             </div>
-            <div className="absolute -left-6 top-1/4 glass-lime rounded-xl p-4 animate-float-delay">
-              <div className="text-lime font-oswald text-2xl font-bold">ROI 280%</div>
+            <div className="absolute -left-3 sm:-left-6 top-1/4 glass-lime rounded-xl p-3 sm:p-4 animate-float-delay">
+              <div className="text-lime font-oswald text-lg sm:text-2xl font-bold">ROI 280%</div>
               <div className="text-white/60 text-xs font-golos">3 месяц</div>
             </div>
-            <div className="absolute -right-4 bottom-1/4 glass-cyan rounded-xl p-4 animate-float">
-              <div className="text-cyan font-oswald text-2xl font-bold">-42% CPL</div>
+            <div className="absolute -right-2 sm:-right-4 bottom-1/4 glass-cyan rounded-xl p-3 sm:p-4 animate-float">
+              <div className="text-cyan font-oswald text-lg sm:text-2xl font-bold">-42% CPL</div>
               <div className="text-white/60 text-xs font-golos">оптимизация</div>
             </div>
           </div>
         </div>
 
-        <Section className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <Section className="mt-8 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           {[
             { label: "Ключевых запросов", value: 300, suffix: "+" },
             { label: "Целевой CPL", value: 480, suffix: "₽" },
             { label: "Прогноз заказов / мес", value: 120, suffix: "+" },
             { label: "Целевой ROI", value: 160, suffix: "%" },
           ].map((m) => (
-            <div key={m.label} className="glass rounded-2xl p-6 text-center hover:border-lime/30 transition-all border border-white/5">
-              <div className="font-oswald text-4xl font-bold text-lime text-glow-lime">
+            <div key={m.label} className="glass rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center hover:border-lime/30 transition-all border border-white/5">
+              <div className="font-oswald text-2xl sm:text-4xl font-bold text-lime text-glow-lime">
                 <AnimatedNumber target={m.value} suffix={m.suffix} />
               </div>
-              <div className="text-white/50 text-sm font-golos mt-2">{m.label}</div>
+              <div className="text-white/50 text-xs sm:text-sm font-golos mt-1 sm:mt-2">{m.label}</div>
             </div>
           ))}
         </Section>
       </section>
 
       {/* PLAN */}
-      <section id="plan" className="max-w-6xl mx-auto px-6 py-20">
+      <section id="plan" className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
         <Section>
-          <div className="text-center mb-12">
-            <h2 className="font-oswald text-5xl font-bold uppercase">ПЛАН НА 3 МЕСЯЦА</h2>
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="font-oswald text-3xl sm:text-5xl font-bold uppercase">ПЛАН НА 3 МЕСЯЦА</h2>
           </div>
         </Section>
 
-        <Section className="flex gap-2 mb-8 glass rounded-2xl p-2">
+        <Section className="flex gap-1.5 sm:gap-2 mb-6 sm:mb-8 glass rounded-xl sm:rounded-2xl p-1.5 sm:p-2">
           {months.map((m, i) => (
             <button
               key={i}
               onClick={() => setActiveMonth(i)}
-              className={`flex-1 py-3 px-4 rounded-xl font-oswald font-semibold text-sm uppercase transition-all ${
+              className={`flex-1 py-2 sm:py-3 px-2 sm:px-4 rounded-lg sm:rounded-xl font-oswald font-semibold text-xs sm:text-sm uppercase transition-all ${
                 activeMonth === i
                   ? m.color === "lime"
                     ? "bg-lime text-navy glow-lime"
@@ -299,31 +290,31 @@ export default function Index() {
         {months.map((m, i) => (
           <div key={i} className={activeMonth !== i ? "hidden" : ""}>
             <Section>
-              <div className="grid lg:grid-cols-3 gap-6">
-                <div className="lg:col-span-2 glass rounded-2xl p-8">
-                  <h3 className={`font-oswald text-3xl font-bold mb-6 ${m.color === "lime" ? "text-lime" : "text-cyan"}`}>
+              <div className="grid lg:grid-cols-3 gap-4 sm:gap-6">
+                <div className="lg:col-span-2 glass rounded-xl sm:rounded-2xl p-5 sm:p-8">
+                  <h3 className={`font-oswald text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 ${m.color === "lime" ? "text-lime" : "text-cyan"}`}>
                     {m.title}
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2 sm:space-y-3">
                     {m.tasks.map((t, ti) => (
-                      <li key={ti} className="flex items-start gap-3 font-golos text-white/80">
-                        <span className={`mt-1 w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold ${m.color === "lime" ? "bg-lime text-navy" : "bg-cyan text-navy"}`}>
+                      <li key={ti} className="flex items-start gap-3 font-golos text-white/80 text-sm sm:text-base">
+                        <span className={`mt-0.5 w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold ${m.color === "lime" ? "bg-lime text-navy" : "bg-cyan text-navy"}`}>
                           {ti + 1}
                         </span>
                         {t}
                       </li>
                     ))}
                   </ul>
-                  <div className={`mt-6 glass rounded-xl p-4 border ${m.color === "lime" ? "border-lime/20" : "border-cyan/20"}`}>
+                  <div className={`mt-4 sm:mt-6 glass rounded-xl p-3 sm:p-4 border ${m.color === "lime" ? "border-lime/20" : "border-cyan/20"}`}>
                     <span className={`font-golos text-sm font-semibold ${m.color === "lime" ? "text-lime" : "text-cyan"}`}>
                       🎯 {m.metric}
                     </span>
                   </div>
                 </div>
-                <div className="glass rounded-2xl p-8">
-                  <div className="text-white/50 font-golos text-sm uppercase tracking-widest mb-6">KPI месяца</div>
+                <div className="glass rounded-xl sm:rounded-2xl p-5 sm:p-8">
+                  <div className="text-white/50 font-golos text-xs sm:text-sm uppercase tracking-widest mb-4 sm:mb-6">KPI месяца</div>
                   {m.kpi.map((k, ki) => (
-                    <div key={ki} className="mb-6 last:mb-0">
+                    <div key={ki} className="mb-4 sm:mb-6 last:mb-0">
                       <div className="flex justify-between font-golos text-sm mb-2">
                         <span className="text-white/60">{k.label}</span>
                         <span className={`font-bold ${m.color === "lime" ? "text-lime" : "text-cyan"}`}>{k.value}</span>
@@ -344,17 +335,39 @@ export default function Index() {
       </section>
 
       {/* KEYWORDS */}
-      <section id="keywords" className="border-y border-white/5 py-20" style={{ background: "rgba(255,255,255,0.02)" }}>
-        <div className="max-w-6xl mx-auto px-6">
+      <section id="keywords" className="border-y border-white/5 py-12 sm:py-20" style={{ background: "rgba(255,255,255,0.02)" }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Section>
-            <div className="text-center mb-12">
-              <div className="text-cyan font-golos text-sm uppercase tracking-widest mb-3">Семантика</div>
-              <h2 className="font-oswald text-5xl font-bold uppercase">КЛЮЧЕВЫЕ ЗАПРОСЫ</h2>
-              <p className="text-white/50 font-golos mt-4">Прогноз по базовой семантике (пример для ниши)</p>
+            <div className="text-center mb-8 sm:mb-12">
+              <div className="text-cyan font-golos text-xs sm:text-sm uppercase tracking-widest mb-3">Семантика</div>
+              <h2 className="font-oswald text-3xl sm:text-5xl font-bold uppercase">КЛЮЧЕВЫЕ ЗАПРОСЫ</h2>
+              <p className="text-white/50 font-golos mt-3 text-sm sm:text-base">Прогноз по базовой семантике (пример для ниши)</p>
             </div>
           </Section>
           <Section>
-            <div className="glass rounded-2xl overflow-hidden">
+            {/* Mobile cards */}
+            <div className="sm:hidden space-y-3">
+              {keywords.map((kw, i) => (
+                <div key={i} className="glass rounded-xl p-4 border border-white/5">
+                  <div className="flex items-start justify-between gap-2 mb-2">
+                    <div className="font-golos text-white/90 text-sm">{kw.query}</div>
+                    <span className={`text-xs font-golos font-semibold px-2 py-0.5 rounded-full flex-shrink-0 ${
+                      kw.intent === "горячий"
+                        ? "bg-lime/15 text-lime border border-lime/30"
+                        : kw.intent === "тёплый"
+                        ? "bg-cyan/15 text-cyan border border-cyan/30"
+                        : "bg-white/5 text-white/50 border border-white/10"
+                    }`}>{kw.intent}</span>
+                  </div>
+                  <div className="flex gap-4 text-xs font-golos text-white/50">
+                    <span>📊 {kw.volume.toLocaleString("ru")} / мес</span>
+                    <span>💰 {kw.cpc}₽ / клик</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* Desktop table */}
+            <div className="hidden sm:block glass rounded-2xl overflow-hidden">
               <div className="grid grid-cols-4 px-6 py-4 border-b border-white/10">
                 {["Запрос", "Частотность / мес", "Ставка (₽)", "Тип"].map((h) => (
                   <div key={h} className="text-white/40 text-xs font-golos uppercase tracking-wider">{h}</div>
@@ -381,18 +394,18 @@ export default function Index() {
             </div>
           </Section>
 
-          <Section className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Section className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
             {[
               { label: "Горячих запросов", value: "38%", icon: "Flame", desc: "Высокая конверсия" },
               { label: "Тёплых запросов", value: "44%", icon: "TrendingUp", desc: "Работа с воронкой" },
               { label: "Информационных", value: "18%", icon: "Info", desc: "Brand Awareness" },
             ].map((s) => (
-              <div key={s.label} className="glass-lime rounded-xl p-5 flex items-center gap-4">
-                <div className="w-12 h-12 bg-lime/15 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Icon name={s.icon as string} size={22} className="text-lime" />
+              <div key={s.label} className="glass-lime rounded-xl p-4 sm:p-5 flex items-center gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-lime/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name={s.icon as string} size={20} className="text-lime" />
                 </div>
                 <div>
-                  <div className="font-oswald text-2xl font-bold text-lime">{s.value}</div>
+                  <div className="font-oswald text-xl sm:text-2xl font-bold text-lime">{s.value}</div>
                   <div className="font-golos text-white/70 text-sm">{s.label}</div>
                   <div className="font-golos text-white/40 text-xs">{s.desc}</div>
                 </div>
@@ -403,28 +416,28 @@ export default function Index() {
       </section>
 
       {/* TASKS */}
-      <section id="tasks" className="max-w-6xl mx-auto px-6 py-20">
+      <section id="tasks" className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
         <Section>
-          <div className="text-center mb-12">
-            <div className="text-lime font-golos text-sm uppercase tracking-widest mb-3">Операционный ритм</div>
-            <h2 className="font-oswald text-5xl font-bold uppercase">ЗАДАЧИ ПО ДНЯМ</h2>
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="text-lime font-golos text-xs sm:text-sm uppercase tracking-widest mb-3">Операционный ритм</div>
+            <h2 className="font-oswald text-3xl sm:text-5xl font-bold uppercase">ЗАДАЧИ ПО ДНЯМ</h2>
           </div>
         </Section>
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-4 sm:gap-8">
           <Section>
-            <div className="glass rounded-2xl p-8">
-              <h3 className="font-oswald text-2xl font-bold text-cyan mb-6 flex items-center gap-3">
-                <Icon name="Calendar" size={22} className="text-cyan" />
+            <div className="glass rounded-xl sm:rounded-2xl p-5 sm:p-8">
+              <h3 className="font-oswald text-xl sm:text-2xl font-bold text-cyan mb-4 sm:mb-6 flex items-center gap-3">
+                <Icon name="Calendar" size={20} className="text-cyan" />
                 ЕЖЕНЕДЕЛЬНО
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 {weekTasks.map((t, i) => (
-                  <div key={i} className="flex items-center gap-4 glass rounded-xl p-4 hover:border-cyan/30 transition-all border border-transparent">
-                    <div className="w-10 h-10 bg-cyan/15 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon name={t.icon as string} size={18} className="text-cyan" />
+                  <div key={i} className="flex items-center gap-3 glass rounded-xl p-3 sm:p-4 border border-transparent hover:border-cyan/30 transition-all">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 bg-cyan/15 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name={t.icon as string} size={16} className="text-cyan" />
                     </div>
                     <div>
-                      <div className="text-cyan font-oswald font-semibold text-sm uppercase">{t.day}</div>
+                      <div className="text-cyan font-oswald font-semibold text-xs uppercase">{t.day}</div>
                       <div className="text-white/80 font-golos text-sm">{t.task}</div>
                     </div>
                   </div>
@@ -433,23 +446,23 @@ export default function Index() {
             </div>
           </Section>
           <Section>
-            <div className="glass rounded-2xl p-8">
-              <h3 className="font-oswald text-2xl font-bold text-lime mb-6 flex items-center gap-3">
-                <Icon name="Clock" size={22} className="text-lime" />
+            <div className="glass rounded-xl sm:rounded-2xl p-5 sm:p-8">
+              <h3 className="font-oswald text-xl sm:text-2xl font-bold text-lime mb-4 sm:mb-6 flex items-center gap-3">
+                <Icon name="Clock" size={20} className="text-lime" />
                 ЕЖЕДНЕВНО
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 {dailyTasks.map((t, i) => (
-                  <div key={i} className="flex items-center gap-4 glass rounded-xl p-4 hover:border-lime/30 transition-all border border-transparent">
-                    <div className="text-lime font-oswald font-bold text-sm w-14 flex-shrink-0">{t.time}</div>
-                    <div className="w-10 h-10 bg-lime/15 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon name={t.icon as string} size={18} className="text-lime" />
+                  <div key={i} className="flex items-center gap-3 glass rounded-xl p-3 sm:p-4 border border-transparent hover:border-lime/30 transition-all">
+                    <div className="text-lime font-oswald font-bold text-xs w-12 flex-shrink-0">{t.time}</div>
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 bg-lime/15 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name={t.icon as string} size={16} className="text-lime" />
                     </div>
                     <div className="text-white/80 font-golos text-sm">{t.task}</div>
                   </div>
                 ))}
               </div>
-              <div className="mt-6 glass-lime rounded-xl p-4">
+              <div className="mt-4 sm:mt-6 glass-lime rounded-xl p-3 sm:p-4">
                 <div className="text-white/60 font-golos text-sm">
                   📊 Ежемесячный отчёт: P&L, воронка, прогноз на следующий месяц
                 </div>
@@ -460,18 +473,18 @@ export default function Index() {
       </section>
 
       {/* ROI CALCULATOR */}
-      <section id="roi" className="border-y border-white/5 py-20" style={{ background: "rgba(255,255,255,0.02)" }}>
-        <div className="max-w-6xl mx-auto px-6">
+      <section id="roi" className="border-y border-white/5 py-12 sm:py-20" style={{ background: "rgba(255,255,255,0.02)" }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Section>
-            <div className="text-center mb-12">
-              <div className="text-lime font-golos text-sm uppercase tracking-widest mb-3">Интерактивный расчёт</div>
-              <h2 className="font-oswald text-5xl font-bold uppercase">КАЛЬКУЛЯТОР ROI</h2>
-              <p className="text-white/50 font-golos mt-4">Двигайте ползунки — результат пересчитывается в реальном времени</p>
+            <div className="text-center mb-8 sm:mb-12">
+              <div className="text-lime font-golos text-xs sm:text-sm uppercase tracking-widest mb-3">Интерактивный расчёт</div>
+              <h2 className="font-oswald text-3xl sm:text-5xl font-bold uppercase">КАЛЬКУЛЯТОР ROI</h2>
+              <p className="text-white/50 font-golos mt-3 text-sm sm:text-base">Двигайте ползунки — результат пересчитывается в реальном времени</p>
             </div>
           </Section>
           <Section>
-            <div className="grid lg:grid-cols-2 gap-8">
-              <div className="glass rounded-2xl p-8 space-y-8">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
+              <div className="glass rounded-xl sm:rounded-2xl p-5 sm:p-8 space-y-6 sm:space-y-8">
                 {[
                   { label: "Рекламный бюджет", value: budget, min: 10000, max: 100000, step: 5000, onChange: setBudget, format: (v: number) => `${v.toLocaleString("ru")} ₽` },
                   { label: "Конверсия сайта (%)", value: convRate, min: 1, max: 15, step: 0.5, onChange: setConvRate, format: (v: number) => `${v}%` },
@@ -479,9 +492,9 @@ export default function Index() {
                   { label: "Маржинальность (%)", value: margin, min: 10, max: 80, step: 5, onChange: setMargin, format: (v: number) => `${v}%` },
                 ].map((sl) => (
                   <div key={sl.label}>
-                    <div className="flex justify-between font-golos mb-3">
+                    <div className="flex justify-between font-golos mb-2 sm:mb-3">
                       <span className="text-white/70 text-sm">{sl.label}</span>
-                      <span className="text-lime font-semibold">{sl.format(sl.value)}</span>
+                      <span className="text-lime font-semibold text-sm">{sl.format(sl.value)}</span>
                     </div>
                     <input
                       type="range"
@@ -496,27 +509,27 @@ export default function Index() {
                 ))}
               </div>
 
-              <div className="space-y-4">
-                <div className="gradient-border rounded-2xl p-8 text-center">
+              <div className="space-y-3 sm:space-y-4">
+                <div className="gradient-border rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center">
                   <div className="text-white/50 font-golos text-sm mb-2">ROI рекламы</div>
-                  <div className={`font-oswald text-7xl font-bold ${roi >= 0 ? "text-lime text-glow-lime" : "text-red-400"}`}>
+                  <div className={`font-oswald text-6xl sm:text-7xl font-bold ${roi >= 0 ? "text-lime text-glow-lime" : "text-red-400"}`}>
                     {roi}%
                   </div>
                   <div className={`font-golos mt-2 text-sm ${roi >= 100 ? "text-lime" : roi >= 0 ? "text-white/60" : "text-red-400"}`}>
                     {roi >= 200 ? "Отличный результат!" : roi >= 100 ? "Прибыльно" : roi >= 0 ? "На уровне окупаемости" : "Убыточно — снизьте бюджет"}
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   {[
                     { label: "Кликов в месяц", value: clicks.toLocaleString("ru"), icon: "MousePointer", color: "cyan" },
                     { label: "Лидов в месяц", value: leads.toLocaleString("ru"), icon: "Users", color: "lime" },
                     { label: "Стоимость лида", value: `${cpl.toLocaleString("ru")} ₽`, icon: "Tag", color: "cyan" },
                     { label: "Прибыль", value: `${profit > 0 ? "+" : ""}${(profit / 1000).toFixed(0)}K ₽`, icon: "TrendingUp", color: profit >= 0 ? "lime" : "red" },
                   ].map((r) => (
-                    <div key={r.label} className={`glass rounded-xl p-4 border ${r.color === "lime" ? "border-lime/15" : r.color === "cyan" ? "border-cyan/15" : "border-red-500/15"}`}>
-                      <Icon name={r.icon as string} size={18} className={`mb-2 ${r.color === "lime" ? "text-lime" : r.color === "cyan" ? "text-cyan" : "text-red-400"}`} />
-                      <div className={`font-oswald text-xl font-bold ${r.color === "lime" ? "text-lime" : r.color === "cyan" ? "text-cyan" : "text-red-400"}`}>{r.value}</div>
-                      <div className="text-white/50 text-xs font-golos mt-1">{r.label}</div>
+                    <div key={r.label} className={`glass rounded-xl p-3 sm:p-4 border ${r.color === "lime" ? "border-lime/15" : r.color === "cyan" ? "border-cyan/15" : "border-red-500/15"}`}>
+                      <Icon name={r.icon as string} size={16} className={`mb-1 sm:mb-2 ${r.color === "lime" ? "text-lime" : r.color === "cyan" ? "text-cyan" : "text-red-400"}`} />
+                      <div className={`font-oswald text-lg sm:text-xl font-bold ${r.color === "lime" ? "text-lime" : r.color === "cyan" ? "text-cyan" : "text-red-400"}`}>{r.value}</div>
+                      <div className="text-white/50 text-xs font-golos mt-0.5 sm:mt-1">{r.label}</div>
                     </div>
                   ))}
                 </div>
@@ -527,26 +540,26 @@ export default function Index() {
       </section>
 
       {/* STRATEGIES */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
         <Section>
-          <div className="text-center mb-12">
-            <div className="text-cyan font-golos text-sm uppercase tracking-widest mb-3">Методология</div>
-            <h2 className="font-oswald text-5xl font-bold uppercase">СНИЖЕНИЕ СТОИМОСТИ ЛИДА</h2>
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="text-cyan font-golos text-xs sm:text-sm uppercase tracking-widest mb-3">Методология</div>
+            <h2 className="font-oswald text-3xl sm:text-5xl font-bold uppercase">СНИЖЕНИЕ СТОИМОСТИ ЛИДА</h2>
           </div>
         </Section>
-        <Section className="grid md:grid-cols-2 gap-6">
+        <Section className="grid sm:grid-cols-2 gap-4 sm:gap-6">
           {strategies.map((s, i) => (
-            <div key={i} className="glass rounded-2xl p-8 hover:border-lime/20 transition-all border border-white/5 group">
-              <div className="flex items-start gap-4">
-                <div className="w-14 h-14 bg-lime/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-lime/20 transition-all">
-                  <Icon name={s.icon as string} size={26} className="text-lime" />
+            <div key={i} className="glass rounded-xl sm:rounded-2xl p-5 sm:p-8 hover:border-lime/20 transition-all border border-white/5 group">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-lime/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-lime/20 transition-all">
+                  <Icon name={s.icon as string} size={22} className="text-lime" />
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-oswald text-xl font-semibold">{s.title}</h3>
-                    <span className="text-lime font-oswald font-bold text-lg">{s.saving}</span>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between mb-1 sm:mb-2 gap-2">
+                    <h3 className="font-oswald text-base sm:text-xl font-semibold leading-tight">{s.title}</h3>
+                    <span className="text-lime font-oswald font-bold text-base sm:text-lg flex-shrink-0">{s.saving}</span>
                   </div>
-                  <p className="text-white/60 font-golos text-sm leading-relaxed">{s.desc}</p>
+                  <p className="text-white/60 font-golos text-xs sm:text-sm leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             </div>
@@ -555,40 +568,40 @@ export default function Index() {
       </section>
 
       {/* PROTECTION */}
-      <section id="protection" className="border-y border-white/5 py-20" style={{ background: "rgba(255,255,255,0.02)" }}>
-        <div className="max-w-6xl mx-auto px-6">
+      <section id="protection" className="border-y border-white/5 py-12 sm:py-20" style={{ background: "rgba(255,255,255,0.02)" }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Section>
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-8 sm:mb-12">
               <div>
-                <div className="text-lime font-golos text-sm uppercase tracking-widest mb-3">Безопасность бюджетов</div>
-                <h2 className="font-oswald text-5xl font-bold uppercase">ЗАЩИТА ОТ<br /><span className="text-lime">СЛИВА</span></h2>
-                <p className="text-white/60 font-golos mt-4 leading-relaxed">
+                <div className="text-lime font-golos text-xs sm:text-sm uppercase tracking-widest mb-3">Безопасность бюджетов</div>
+                <h2 className="font-oswald text-3xl sm:text-5xl font-bold uppercase">ЗАЩИТА ОТ<br /><span className="text-lime">СЛИВА</span></h2>
+                <p className="text-white/60 font-golos mt-3 sm:mt-4 leading-relaxed text-sm sm:text-base">
                   Комплексная система защиты рекламного бюджета от фрода,
                   нецелевого трафика и технических ошибок.
                 </p>
               </div>
-              <div className="relative rounded-2xl overflow-hidden glow-cyan animate-float-delay">
-                <img src={SHIELD_IMG} alt="Protection" className="w-full rounded-2xl" />
+              <div className="relative rounded-xl sm:rounded-2xl overflow-hidden glow-cyan animate-float-delay">
+                <img src={SHIELD_IMG} alt="Protection" className="w-full rounded-xl sm:rounded-2xl" />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="font-oswald text-2xl font-bold text-cyan">−42% потерь бюджета</div>
-                  <div className="text-white/60 font-golos text-sm">за счёт комплексной защиты</div>
+                <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                  <div className="font-oswald text-lg sm:text-2xl font-bold text-cyan">−42% потерь бюджета</div>
+                  <div className="text-white/60 font-golos text-xs sm:text-sm">за счёт комплексной защиты</div>
                 </div>
               </div>
             </div>
           </Section>
-          <Section className="grid md:grid-cols-2 gap-4">
+          <Section className="grid sm:grid-cols-2 gap-3 sm:gap-4">
             {risks.map((r, i) => (
-              <div key={i} className={`glass rounded-2xl p-6 border ${r.color === "lime" ? "border-lime/15 hover:border-lime/30" : "border-cyan/15 hover:border-cyan/30"} transition-all`}>
-                <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${r.color === "lime" ? "bg-lime/15" : "bg-cyan/15"}`}>
-                    <Icon name={r.icon as string} size={22} className={r.color === "lime" ? "text-lime" : "text-cyan"} />
+              <div key={i} className={`glass rounded-xl sm:rounded-2xl p-4 sm:p-6 border ${r.color === "lime" ? "border-lime/15 hover:border-lime/30" : "border-cyan/15 hover:border-cyan/30"} transition-all`}>
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${r.color === "lime" ? "bg-lime/15" : "bg-cyan/15"}`}>
+                    <Icon name={r.icon as string} size={18} className={r.color === "lime" ? "text-lime" : "text-cyan"} />
                   </div>
                   <div>
-                    <div className={`font-oswald font-semibold text-lg mb-1 ${r.color === "lime" ? "text-lime" : "text-cyan"}`}>
+                    <div className={`font-oswald font-semibold text-base sm:text-lg mb-1 ${r.color === "lime" ? "text-lime" : "text-cyan"}`}>
                       {r.risk}
                     </div>
-                    <p className="text-white/60 font-golos text-sm leading-relaxed">{r.solution}</p>
+                    <p className="text-white/60 font-golos text-xs sm:text-sm leading-relaxed">{r.solution}</p>
                   </div>
                 </div>
               </div>
@@ -598,16 +611,45 @@ export default function Index() {
       </section>
 
       {/* FINANCIAL */}
-      <section className="border-t border-white/5 py-20" style={{ background: "rgba(255,255,255,0.02)" }}>
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="border-t border-white/5 py-12 sm:py-20" style={{ background: "rgba(255,255,255,0.02)" }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Section>
-            <div className="text-center mb-12">
-              <div className="text-cyan font-golos text-sm uppercase tracking-widest mb-3">Финансовая модель</div>
-              <h2 className="font-oswald text-5xl font-bold uppercase">ПУТЬ К ПРИБЫЛЬНОСТИ</h2>
+            <div className="text-center mb-8 sm:mb-12">
+              <div className="text-cyan font-golos text-xs sm:text-sm uppercase tracking-widest mb-3">Финансовая модель</div>
+              <h2 className="font-oswald text-3xl sm:text-5xl font-bold uppercase">ПУТЬ К ПРИБЫЛЬНОСТИ</h2>
             </div>
           </Section>
           <Section>
-            <div className="glass rounded-2xl p-8 overflow-x-auto">
+            {/* Mobile cards */}
+            <div className="sm:hidden space-y-4">
+              {[
+                { month: "Месяц 1", color: "lime", budget: "40 000 ₽", orders: "40–60", cpl: "≤ 800₽", conv: "2–3%", revenue: "120–180К", profit: "8–32К", roi: "20–80%" },
+                { month: "Месяц 2", color: "cyan", budget: "50 000 ₽", orders: "70–100", cpl: "≤ 600₽", conv: "3–4%", revenue: "210–300К", profit: "34–70К", roi: "68–140%" },
+                { month: "Месяц 3", color: "lime", budget: "60 000 ₽", orders: "100–130", cpl: "≤ 480₽", conv: "4–5%", revenue: "300–390К", profit: "60–96К", roi: "100–160%" },
+              ].map((m) => (
+                <div key={m.month} className={`glass rounded-xl p-5 border ${m.color === "lime" ? "border-lime/20" : "border-cyan/20"}`}>
+                  <div className={`font-oswald text-xl font-bold mb-4 ${m.color === "lime" ? "text-lime" : "text-cyan"}`}>{m.month}</div>
+                  <div className="grid grid-cols-2 gap-y-3 gap-x-4 text-sm font-golos">
+                    {[
+                      ["Бюджет", m.budget],
+                      ["Заказы", m.orders],
+                      ["Стоимость заказа", m.cpl],
+                      ["Конверсия", m.conv],
+                      ["Выручка", m.revenue],
+                      ["Прибыль", m.profit],
+                      ["ROI", m.roi],
+                    ].map(([label, val]) => (
+                      <div key={label}>
+                        <div className="text-white/40 text-xs mb-0.5">{label}</div>
+                        <div className={`font-semibold ${m.color === "lime" ? "text-lime" : "text-cyan"}`}>{val}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* Desktop table */}
+            <div className="hidden sm:block glass rounded-2xl p-6 sm:p-8 overflow-x-auto">
               <table className="w-full font-golos">
                 <thead>
                   <tr className="border-b border-white/10">
@@ -646,14 +688,8 @@ export default function Index() {
 
 
       {/* FOOTER */}
-      <footer className="border-t border-white/5 py-8">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-7 h-7 rounded-lg bg-lime flex items-center justify-center">
-              <Icon name="Zap" size={14} className="text-navy" />
-            </div>
-            <span className="font-oswald text-white/50">Доставка цветов · Челябинск</span>
-          </div>
+      <footer className="border-t border-white/5 py-6">
+        <div className="max-w-6xl mx-auto px-6 text-center">
           <div className="text-white/30 font-golos text-sm">
             Коммерческое предложение · 2026
           </div>
